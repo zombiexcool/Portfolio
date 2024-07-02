@@ -2,4 +2,14 @@ body {
 background-color: black;
 }
 p {
-color: white;}
+color: white;
+}
+h1 {
+  color: red;
+}
+h2 {
+  color: orange
+}
+h3 {
+  color: yellow;
+}
