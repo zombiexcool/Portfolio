@@ -1,5 +1,7 @@
 body {
 background-color: black;
+margin: 0 auto; /* pour Ã©viter les marges */
+text-align: center; /* pour corriger le bug de centrage IE */
 }
 p {
 color: white;
