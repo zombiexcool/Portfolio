@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page test</title>
-    <link rel="icon" type="image/x-icon" href="images/RMP_logo_blanc.png">
-    <link rel="stylesheet" href="style.css"/>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Maxime</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1> test </h1>
-    <p> bonjour, je m'apelle maxime. j'ai 16 ans et suis très intéréssé par l'informatique</p>
-    <div class="container">
-        <div id=linux class="box">
-            <h1>Mon expérience avec linux</h1>
-        </div>
-        <div id=cybersécurité class="box">
-            <h1>Mon expérience avec la cybersécurité</h1>
-        </div>
-        <div id=parcours class="box">
-            <h1>Mon parcours</h1>
-        </div>
-        <div id=fonctionnement class="box">
-            <h1>Mon mode de fonctionnement</h1>
-            
-        </div>
-    </div>
-    
+    <header>
+        <h1>Maxime</h1>
+        <p>Passionné de Linux, réseau & télécom</p>
+    </header>
+
+    <main>
+        <section id="presentation">
+            <h2>À propos de moi</h2>
+            <p>Bonjour, je m'appelle Maxime, j'ai <span id="age"></span> ans.</p>
+            <p>Je suis passionné par l'informatique, notamment l'administration système sous Linux, le réseau, l'IOT, et l’électronique. J’adore assembler des ordinateurs, comprendre leur fonctionnement et expérimenter avec différents systèmes comme Debian, Arch ou Ubuntu.</p>
+        </section>
+
+        <section id="lettre">
+            <h2>Mon projet et ma motivation</h2>
+            <p>
+                Madame, Monsieur,<br><br>
+                En intégrant votre IUT, avec la formation BUT Réseaux et Télécommunications à laquelle j’ai candidaté pour la rentrée prochaine, je souhaite approfondir mes connaissances et compétences dans ces domaines.
+                <br><br>
+                Passionné par tout ce qui touche à l’informatique – particulièrement l’administration système sous Linux, l’IOT et le réseau – j’ai mené plusieurs projets concrets comme un réseau privé avec un Raspberry Pi ou la gestion d’objets connectés via Home Assistant. J’apprécie également l’électronique (Arduino, ESPs, soudure, etc.) et ai réalisé des projets comme un mur de LEDs contrôlé par un ESP sous WLED.
+                <br><br>
+                J’ai découvert votre établissement grâce à mon professeur d’informatique et lors des portes ouvertes. Cela a confirmé mon envie de rejoindre votre formation. Je suis convaincu que ce BUT me permettra d’atteindre mes objectifs professionnels, avec la volonté de poursuivre par la suite dans un parcours encore plus spécialisé.
+                <br><br>
+                Merci pour l’attention portée à ma candidature.
+            </p>
+        </section>
+
+        <section id="projets">
+            <h2>Mes projets</h2>
+            <ul>
+                <li>🖥️ Réseau privé avec Raspberry Pi</li>
+                <li>📡 Gestion domotique avec Home Assistant</li>
+                <li>💡 Mur de LEDs avec ESP & WLED</li>
+                <li>🔧 Assemblage PC et maintenance</li>
+                <li>🌐 Exploration des VLANs, routage, protocoles réseaux</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Disponible pour discuter, échanger ou collaborer sur des projets tech.</p>
+            <p>Email : <a href="mailto:tonemail@example.com">tonemail@example.com</a></p>
+            <p>GitHub : <a href="https://github.com/tonpseudo" target="_blank">https://github.com/tonpseudo</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Maxime - Portfolio Réseaux & Télécom</p>
+    </footer>
+
+    <script>
+        // Script pour mettre l'âge à jour automatiquement
+        const birthYear = 2007;
+        const currentYear = new Date().getFullYear();
+        document.getElementById("age").textContent = currentYear - birthYear;
+        document.getElementById("year").textContent = currentYear;
+    </script>
 </body>
+</html>
+
