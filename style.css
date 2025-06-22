@@ -1,0 +1,222 @@
+/* ==================== GLOBAL ==================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+h1 {
+  text-align: center;
+  color: aliceblue;
+}
+
+p {
+  color: white;
+  font-size: 100px;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* ==================== FOND ANIMÉ (ÉTOILES) ==================== */
+
+.main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  animation: zoom 4s ease-in-out alternate infinite;
+  pointer-events: none;
+  z-index: 0;
+  box-shadow:
+    -24vw -44vh 2px 2px #fff, 38vw -4vh 0 0 #fff,
+    -20vw -48vh 1px 2px #fff, -39vw 38vh 3px 0 #fff,
+    -42vw -11vh 0 3px #fff, 12vw 15vh 3px 0 #fff,
+    42vw 6vh 3px 2px #fff, -8vw 9vh 0 0 #fff,
+    34vw -38vh 1px 0 #fff, -17vw 45vh 3px 0 #fff,
+    22vw -36vh 3px 2px #fff, -42vw 1vh 1px 0 #fff,
+    25vw -22vh 2px 2px #fff, -30vw 32vh 1px 0 #fff,
+    18vw 25vh 2px 2px #fff, -33vw -30vh 3px 0 #fff,
+    40vw 40vh 1px 1px #fff, -45vw 10vh 1px 0 #fff,
+    -15vw -20vh 2px 2px #fff, 20vw 10vh 1px 0 #fff,
+    -10vw 40vh 2px 1px #fff, 5vw -25vh 2px 0 #fff,
+    15vw 35vh 2px 2px #fff, -35vw 15vh 1px 0 #fff;
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.6); }
+}
+
+
+/* ==================== CONTENEUR PRINCIPAL ==================== */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  gap: 40px;
+  background-color: #525252;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.video-container,
+.text-container {
+  flex: 1;
+}
+
+.projet-video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.text-container h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+
+/* ==================== NAVIGATION ==================== */
+
+.navbar-wrapper {
+  background-color: #1a1a1a;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 10px 40px;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.site-name {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  background-color: #444;
+}
+
+
+/* ==================== TEXTE DÉCORATIF ==================== */
+
+.texte {
+  font-size: xx-large;
+  color: #333;
+}
+
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+  p {
+    font-size: 32px;
+  }
+
+  .text-container h1 {
+    font-size: 32px;
+  }
+
+  .container,
+  .reverse {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .text-container,
+  .video-container {
+    width: 100%;
+  }
+
+  .projet-video {
+    max-width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .site-name {
+    font-size: 18px;
+  }
+}
